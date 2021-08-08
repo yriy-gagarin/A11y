@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color & color contrast violations</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+
+    .radio_native_input + .radio_input{
+      border-color: #B7B7B7; /* contrast ratio with white 2:1 */
+    }
+
+    .radio_label {
+      color: #7F7F7F; /* contrast ratio with white 4:1 */
+    }
+
+    .radio_native_input:checked + .radio_input{
+      border-color: black;
+    }
+
+    .radio_native_input:checked + .radio_input:after {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <fieldset class="container">
+    <legend>Please select your preferred contact method:</legend>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="email">
+      <span class="radio_input"></span>
+      <span class="radio_label">Email</span>
+    </label>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="phone" checked>
+      <span class="radio_input"></span>
+      <span class="radio_label">Phone</span>
+    </label>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="Mail">
+      <span class="radio_input"></span>
+      <span class="radio_label">Mail</span>
+    </label>
+  </fieldset>
+
+</body>
+</html>

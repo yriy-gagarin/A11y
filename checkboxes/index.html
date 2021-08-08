@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Checkboxes examples</title>
+  <title>Check boxes example</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+
+<h1>Workshop check boxes example</h1>
+<main>
+  <fieldset class="container">
+    <legend>Please select sandwich condiments:</legend>
+    <label class="check_container">
+      <input class="check_native_input" type="checkbox" name="condiment" value="lettuce">
+      <span class="check_input"></span>
+      <span class="check_label">Lettuce</span>
+    </label>
+    <label class="check_container">
+      <input class="check_native_input" type="checkbox" name="condiment" value="tomato">
+      <span class="check_input"></span>
+      <span class="check_label">Tomato</span>
+    </label>
+    <label class="check_container">
+      <input class="check_native_input" type="checkbox" name="condiment" value="mustard">
+      <span class="check_input"></span>
+      <span class="check_label">Mustard</span>
+    </label>
+    <label class="check_container" title="Bonus for all clients">
+      <input class="check_native_input" type="checkbox" name="condiment" value="bonus" disabled checked>
+      <span class="check_input"></span>
+      <span class="check_label">Bonus gift</span>
+    </label>
+    <label class="check_container" title="Temporarily unavailable">
+      <input class="check_native_input" type="checkbox" name="condiment" value="sprouts" disabled>
+      <span class="check_input"></span>
+      <span class="check_label">Sprouts</span>
+    </label>
+  </fieldset>
+</main>
 
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wrong grouping example</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<div class="container">
+  <p>Please select your preferred contact method:</p>
+  <label class="radio_container">
+    <input class="radio_native_input" type="radio" name="contact" value="email" checked>
+    <span class="radio_input"></span>
+    <span class="radio_label">Email</span>
+  </label>
+  <label class="radio_container">
+    <input class="radio_native_input" type="radio" name="contact" value="phone">
+    <span class="radio_input"></span>
+    <span class="radio_label">Phone</span>
+  </label>
+  <label class="radio_container">
+    <input class="radio_native_input" type="radio" name="contact" value="Mail">
+    <span class="radio_input"></span>
+    <span class="radio_label">Mail</span>
+  </label>
+  <label class="radio_container" title="Temporarily unavailable due to COVID-19 pandemic">
+    <input class="radio_native_input" type="radio" name="contact" value="Personal" disabled>
+    <span class="radio_input"></span>
+    <span class="radio_label">Personal meeting</span>
+  </label>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Default design example</title>
+  <style>
+    .container{
+      max-width: 350px;
+      margin: 2em auto;
+    }
+  </style>
+</head>
+<body>
+
+  <fieldset class="container">
+    <legend>Please select your preferred contact method:</legend>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="email" checked>
+      <span class="radio_input"></span>
+      <span class="radio_label">Email</span>
+    </label>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="phone">
+      <span class="radio_input"></span>
+      <span class="radio_label">Phone</span>
+    </label>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="Mail">
+      <span class="radio_input"></span>
+      <span class="radio_label">Mail</span>
+    </label>
+    <label class="radio_container" title="Temporarily unavailable due to COVID-19 pandemic">
+      <input class="radio_native_input" type="radio" name="contact" value="Personal" disabled>
+      <span class="radio_input"></span>
+      <span class="radio_label">Personal meeting</span>
+    </label>
+  </fieldset>
+
+</body>
+</html>

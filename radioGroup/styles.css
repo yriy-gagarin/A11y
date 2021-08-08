@@ -1,0 +1,106 @@
+:root {
+  --dark-blue: #1770c7; /* contrast ratio with white 5:1 */
+  --light-blue: #86C3FF; /* contrast ratio with white 1.9:1 */
+  --dark-gray: #767676; /* contrast ratio with white 4.5:1 */
+  --light-gray: #D4D4D4;
+}
+
+.container{
+  width: 300px;
+  margin: 2em auto;
+}
+
+.radio_container {
+  margin-bottom: 0.6em;
+  margin-left: 1em;
+  cursor: pointer;
+  display: flex;
+  width: fit-content;
+}
+
+/* Hover */
+.radio_container:hover .radio_native_input:not(:disabled) + .radio_input:before{
+  content: '';
+  position: absolute;
+  width: 1.7em;
+  height: 1.7em;
+  background: var(--dark-blue);
+  opacity: 0.2;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.radio_native_input {
+  /* Hide input input */
+  /* For modern browsers */
+  /*position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;*/
+
+  /* Hide input input */
+  /* Known as .sr-only  or .visually-hidden */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  /* Hide browser outline for later overriding */
+  outline: none;
+}
+
+.radio_input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 2px solid var(--dark-blue);
+  background: white;
+  position: relative;
+}
+
+.radio_label{
+  vertical-align: middle;
+  font-size: 1em;
+  padding-left: 0.5em;
+}
+
+/* Checked */
+.radio_native_input:checked + .radio_input:after {
+  content: '';
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  background: var(--dark-blue);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+/* Disabled */
+.radio_native_input:disabled + .radio_input {
+  cursor: default;
+  background: var(--light-gray);
+  border-color: var(--dark-gray);
+}
+.radio_native_input:disabled ~ .radio_label {
+  cursor: default;
+  color: var(--dark-gray);
+}
+.radio_native_input:checked:disabled + .radio_input:after {
+  background: var(--dark-gray);
+}
+
+/* Focused */
+.radio_native_input:focus + .radio_input {
+  box-shadow:
+    0 0 0 2px white,
+    0 0 1px 4px var(--dark-blue),
+    0 0 2px 5px white;
+}

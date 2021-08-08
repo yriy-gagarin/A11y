@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text spacing violations</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .container{
+      overflow: hidden;
+    }
+    .radio_label{
+      max-width: 250px;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <fieldset class="container">
+    <legend>Please select your preferred contact method:</legend>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="email">
+      <span class="radio_input"></span>
+      <span class="radio_label">Му preferred contact method is Email</span>
+    </label>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="phone" checked>
+      <span class="radio_input"></span>
+      <span class="radio_label">Му preferred contact method is Phone</span>
+    </label>
+    <label class="radio_container">
+      <input class="radio_native_input" type="radio" name="contact" value="Mail">
+      <span class="radio_input"></span>
+      <span class="radio_label">Му preferred contact method is Mail</span>
+    </label>
+  </fieldset>
+
+</body>
+</html>

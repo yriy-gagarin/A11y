@@ -74,13 +74,11 @@
 .radio_native_input:checked + .radio_input:after {
   content: '';
   position: absolute;
-  width: 0.5em;
-  height: 0.5em;
-  background: var(--dark-blue);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  border: 0.25em solid var(--dark-blue);
 }
 
 /* Disabled */
@@ -103,4 +101,5 @@
     0 0 0 2px white,
     0 0 1px 4px var(--dark-blue),
     0 0 2px 5px white;
+  outline: 2px solid transparent;
 }
